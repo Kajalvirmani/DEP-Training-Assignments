@@ -2,233 +2,68 @@
 <html lang="en">
 
 <head>
-    <style>
-        /* setting input field properties */
-        .input {
-            width: 15em;
-            font-size: 18px;
-            padding: 5px;
-        }
-
-        .container {
-            width: 100%;
-        }
-        /* css for all buttons */
-        .button {
-            background-color: orangered;
-            color: white;
-            padding: 15px 25px;
-            font-size: 15px;
-            border: none;
-            position: absolute;
-            bottom: 15px;
-        }
-        /* post image background */
-        .post {
-            background-color: whitesmoke;
-            display: block;
-            width: 15em;
-            height: 15em;
-            text-align: left;
-
-        }
-        /* header style */
-        .header {
-            background-color: darkslateblue;
-            width: 100%;
-            padding: 1em;
-        }
-        /* for all headings */
-        .headings {
-            text-align: center;
-            color: darkslateblue;
-        }
-
-        .flex-container {
-            display: flex;
-            padding: 2em;
-            justify-content: space-between;
-
-        }
-
-        .post-content {
-            padding: 0em 2em;
-            position: relative;
-            width: 80%;
-        }
-/* styling for footer */
-        .footer {
-            position: absolute;
-            background-color: orangered;
-            text-align: center;
-        }
-/* box styling in header div */
-        .header-box {
-            background-color: aliceblue;
-            border: 3pt orangered;
-            max-width: max-content;
-            padding: 0.25px 55px;
-            border-style: solid;
-            margin: auto;
-
-
-        }
-/* styles for subscribe button */
-        .subscribe {
-            background-color: black;
-            color: white;
-            margin-left: -55px;
-            font-size: 18px;
-            padding: 5px;
-            border: solid black 2px;
-        }
-
-        #allNews {
-            align-self: flex-end;
-        }
-
-        .post-text {
-            position: relative;
-            overflow: hidden;
-                display: -webkit-box;
-                -webkit-line-clamp: 6;
-                -webkit-box-orient: vertical;
-        }
-
-        .main-heading {
-            flex-direction: row;
-        }
-      
-        /* for screen sizes less than 600px, usually phones and tabs */
-        @media only screen and (max-width: 600px) {
-            .post-content {
-                width: 50%;
-            }
-            
-            /* add ellipsis after 3 lines in article detail content */
-            .post-text {
-                overflow: hidden;
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-            }
-
-            .main-heading {
-                flex-direction: column;
-            }
-            /* aligning All News to start of the flex */
-            #allNews {
-                align-self: flex-start;
-                padding-bottom: 10px;
-            }
-
-            .subscribe {
-                margin-left: -80px;
-                position: fixed;
-            }
-            
-        }
-        @media only screen and (max-width: 992px){
-            .post-content {
-                width: 70%;
-            }
-            
-            /* add ellipsis after 3 lines in article detail content */
-            .post-text {
-                overflow: hidden;
-                display: -webkit-box;
-                -webkit-line-clamp: 5;
-                -webkit-box-orient: vertical;
-            }
-
-            /* .main-heading {
-                flex-direction: row;
-            } */
-            /* aligning All News to start of the flex */
-            #allNews {
-                align-self: center;
-                padding-bottom: 10px;
-            }
-
-            .subscribe {
-                
-                font-size: 16px;
-            }
-            .input {
-            width: 11em;
-            font-size: 16px;
-            padding: 5px;
-        }
-        #allNews {
-                align-self: center;
-                
-            }
-            .column{
-                align-items: flex-end;
-            }
-            
-        }
-       
-
-    </style>
+    <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
-    <header class="header container">
+    <header class="header ">
         <div class="header-box">
             <h1 class="headings">NEWS BLOG</h1>
             <h4 class="headings">WORLDWIDE NEWS</h4>
         </div>
 
     </header>
-    <main class="container">
+    <main >
         <div class="flex-container main-heading">
-            <div >
+            <div>
                 <span>SELECT CATEGORY</span>
-                <br>
-                <br>
-                <span class="dropdown">
-                    <select name="articles" id="articles" class="input">
-                        <option value="All" selected>All</option>
-                        <option value="abc">abc</option>
-                        <option value="cde">cde</option>
-                        <option value="efg">efg</option>
-                    </select>
-                </span>
+                <!-- removed <br> and added <p> tag instead of <div> as it would require extra css for alignment-->
+                <p>
+                    <span class="dropdown">
+                        <select name="articles" id="articles" class="input">
+                            <option value="All" selected>All</option>
+                            <option value="abc">abc</option>
+                            <option value="cde">cde</option>
+                            <option value="efg">efg</option>
+                        </select>
+                    </span>
+                </p>
             </div>
 
-            <div id="allNews">
-                <H1 class="headings" style="margin-bottom: 0px;">ALL &nbsp; NEWS</H1>
+            <div class="allNews">
+                <H1 class="headings" style="margin-bottom: 0em;">ALL &nbsp; NEWS</H1>
             </div>
 
             <div class="column">
                 <span>SUBSCRIBE</span>
-                <br>
-                <br>
+                <p>
                 <div>
                     <span>
-                        <input type="email" name="" id="" placeholder="Email Address" class="input email" style="width: fit-content">
+                        <input type="email" name="" id="" placeholder="Email Address" class="input email"
+                            style="width: fit-content">
                         <input type="button" value="subscribe" class="subscribe">
                     </span>
                 </div>
+                </p>
             </div>
 
         </div>
-        <HR>
-        </HR>
+        <hr>
         <div>
             <article>
                 <div class="flex-container">
                     <div>
                         <p class="post">
+                            <!-- added image for fillup, image related to article is added -->
+                            <img src="" alt="image1">
                         </p>
                     </div>
                     <div class="post-content">
-                        <h2 class="headings" style="text-align: left;">Title One</h2>
-                        <p style="margin-top: -1em; font-size: 14px;">posted on 29 June,
+                        <h2 class="headings post-heading">Title One</h2>
+                        <p class="under-post-heading">posted on 29 June,
                             <span style="color: gray;">
                                 //Category: </span> Category one
                         </p>
@@ -253,16 +88,18 @@
                     </div>
                 </div>
             </article>
-
+            <hr class="article-break">
             <article>
                 <div class="flex-container">
                     <div>
                         <p class="post">
+                            <!-- added image for fillup, image related to article is added -->
+                            <img src="" alt="image2">
                         </p>
                     </div>
                     <div class="post-content">
-                        <h2 class="headings" style="text-align: left;">Title Two</h2>
-                        <p style="margin-top: -1em;">posted on 29 June,
+                        <h2 class="headings post-heading">Title Two</h2>
+                        <p class="under-post-heading">posted on 29 June,
                             <span style="color: gray;">
                                 //Category: </span> Category one
                         </p>
@@ -287,15 +124,18 @@
                     </div>
                 </div>
             </article>
+            <hr class="article-break">
             <article>
                 <div class="flex-container">
                     <div>
                         <p class="post">
+                            <!-- added image for fillup, image related to article is added -->
+                            <img src="" alt="image3">
                         </p>
                     </div>
                     <div class="post-content">
-                        <h2 class="headings" style="text-align: left;">Title Three</h2>
-                        <p style="margin-top: -1em;">posted on 29 June,
+                        <h2 class="headings post-heading">Title Three</h2>
+                        <p class="under-post-heading">posted on 29 June,
                             <span style="color: gray;">
                                 //Category: </span> Category one
                         </p>
@@ -323,7 +163,7 @@
         </div>
 
     </main>
-    <footer class="footer container">
+    <footer class="footer ">
         <h4>@NewsFeed 2019</h4>
     </footer>
 
