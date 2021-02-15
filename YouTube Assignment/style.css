@@ -99,7 +99,7 @@ body{
 .thumbnailOuter .iframe-parent{
     border: none;
     margin: 20px;
-    width: 320px;
+    width: 250px;
 
 }
 .thumbnailOuter .iframe-parent:hover{
@@ -107,8 +107,8 @@ body{
 }
 
 .thumbnailOuter .iframe-parent .thumbnail-iframe{
-      height:200px;
-      width: 300px;
+      height:150px;
+      width: 220px;
       border: 1px solid black;
       border-radius: 10px;
       margin: 20px;
@@ -162,16 +162,25 @@ body{
         text-align: center;
         flex-direction: column;
         width: 100%;
-       
+        padding-bottom: 10%;
     }
     .page-numbers-parent .page-number button{
         background-color: white;
         border: 2px solid #4CAF50; /* Green */
         border-radius: 50%;
         margin: 10px;
-        position: relative; 
-        
-        
+        position: relative;         
+    }
+    .page-numbers-parent .page-number button:hover{
+        cursor: pointer;
+    }
+    .page-numbers-parent .page-number button:disabled{
+        background-color: white;
+        border: 2px solid grey; /* Green */
+        border-radius: 50%;
+        margin: 10px;
+        position: relative;   
+        cursor: context-menu;
     }
     .page-numbers-parent .page-number .active{
         background-color: #4CAF50;
@@ -316,6 +325,14 @@ body{
             margin-top:100%; 
             position: fixed;
         }
+        .page-numbers-parent{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+           padding-bottom: 20%;
+        }
      }
         
-       
+      

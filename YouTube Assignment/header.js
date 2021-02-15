@@ -5,8 +5,8 @@ header.innerHTML=`<div class="nav-title">
 <em class="fa fa-youtube-play youtube"></em> YouTube
 </div>
 <div class="search-container">
-<form>
+<form onsubmit="searchAPI(event)">
     <input type="search" placeholder="Search.." id="searchInput" class="search-input" onchange="checkChange()" />
-    <button type="button" class="search-button" id="search" onclick="myFunction()"><em
+    <button type="submit" class="search-button" id="search" ><em
             class="fa fa-search"></em></button< /div>
 </form>`
