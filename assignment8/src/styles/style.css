@@ -1,0 +1,291 @@
+/* external css for homeTask1.html */
+
+body{
+    width: 100%;
+}
+        
+
+        /* setting input field properties */
+        .input {
+            width: 15em;
+            font-size: 1.125em;
+            padding: 0.3125em;
+        }
+
+        
+
+        /* css for all buttons */
+        .button {
+            background-color: orangered;
+            color: white;
+            padding: 0.9375em 1.5625em;
+            font-size: 0.9375em;
+            border: none;
+            position: absolute;
+            
+        }
+
+        /* post image background */
+        .post {
+            
+            display: block;
+            width: 15em;
+            height: 15em;
+            text-align: left;
+
+        }
+
+        /* header style */
+        .header {
+            background-color: darkslateblue;
+            padding: 1em;
+        }
+
+        /* for all headings */
+        .headings {
+            text-align: center;
+            color: darkslateblue;
+        }
+
+        .flex-container {
+            display: flex;
+            padding: 2em;
+            justify-content: space-between;
+            margin-bottom: 3em;
+        }
+
+        .post-content {
+            padding: 0em 2em;
+            position: relative;
+            width: 80%;
+        }
+
+        /* styling for footer */
+        .footer {
+            position: fixed;
+            background-color: orangered;
+            text-align: center;
+            width:inherit;
+            bottom: 0;
+            margin-top: 10em;;
+        }
+
+        /* box styling in header div */
+        .header-box {
+            background-color: aliceblue;
+            border: 3pt orangered;
+            max-width: max-content;
+            padding: 0.015625em 3.4375em;
+            border-style: solid;
+            margin: auto;
+
+
+        }
+
+        /* styles for subscribe button */
+        .subscribe {
+            background-color: black;
+            color: white;
+            margin-left: -3.4375em;
+            font-size: 1.125em;
+            padding: 0.3125em;
+            border: solid black 0.125em;
+        }
+        /* removed usage of id */
+        .allNews {
+            align-self: flex-end;
+        }
+
+        .post-text {
+            padding-bottom: 5em;;
+            position: relative;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+
+        .main-heading {
+            flex-direction: row;
+        }
+
+        .post-heading {
+            text-align: left;
+            font-size: 1.625em;
+            position: relative;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+
+        .under-post-heading {
+            margin-top: -1em;
+            font-size: 0.875em;
+        }
+
+        .article-break {
+
+            border: 0;
+            height: 0.0625em;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(46, 43, 43, 0.55), rgba(0, 0, 0, 0));
+
+        }
+        .heading-button{
+
+            color: white;
+            background-color: black;
+            font-size: 14px;
+            align-self: center;
+            border-radius: 5px;
+            border: 1px solid;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-align: center;
+            flex-direction: row;
+            align-items: center;
+            margin: 20px auto;
+        }
+        .heading-button:hover{
+            cursor: pointer;
+        }
+        .image-post{
+            height: 15em;
+            width: 15em;
+            padding: 0.625em;
+        }
+        .button:hover{
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 992px) {
+            .post-content {
+                width: 70%;
+            }
+
+            /* add ellipsis after 3 lines in article detail content */
+            .post-text {
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                font-size: .945em;
+            }
+
+            /* .main-heading {
+                flex-direction: row;
+            } */
+            /* aligning All News to start of the flex */
+            .allNews {
+                align-self: center;
+                padding-bottom: 0.625em;
+            }
+
+            .subscribe {
+
+                font-size: 1em;
+            }
+
+            .input {
+                width: 11em;
+                font-size: 1em;
+                padding: 0.3125em;
+            }
+
+            .column {
+                align-items: flex-end;
+            }
+
+            .post-heading {
+                text-align: left;
+                font-size: 1em;
+                padding: 0.125em;
+                position: relative;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+            .under-post-heading {
+                margin-top: -1em;
+                font-size: 0.875em;
+            }
+
+        }
+
+        /* for screen sizes less than 600px, usually phones and tabs */
+        @media only screen and (max-width: 600px) {
+            .post-content {
+                width: 50%;
+                padding: 0em 0.8em;
+               
+            }
+
+            /* add ellipsis after 3 lines in article detail content */
+            .post-text {
+                overflow: hidden;
+                display: -webkit-box;
+                
+                -webkit-box-orient: vertical;
+                height:8em;
+            }
+
+            .main-heading {
+                flex-direction: column;
+            }
+
+            /* aligning All News to start of the flex */
+            .allNews {
+                align-self: flex-start;
+                padding-bottom: 1em;
+            }
+
+            .subscribe {
+                margin-left: -5em;
+                position: absolute;
+            }
+
+            .button {
+                padding: 0.325em 0.6375em;
+                font-size: 0.65em;
+                margin-top: 3em;;
+                margin-bottom: 0.01em;
+                
+            }
+            .button:hover{
+                cursor: pointer;
+            }
+
+            .post {
+                width: 8em;
+                height: 8em;
+            }
+
+            .post-heading {
+                text-align: left;
+                font-size: 1em;
+                padding: 0.0125em;
+                position: relative;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+            }
+
+            .under-post-heading {
+
+                font-size: 0.475em;
+            }
+
+            .post-text {
+                font-size: 0.8em;
+            }
+            .image-post{
+                height: 7em;
+                width: 7em;
+            }
+
+
+        }
+    
