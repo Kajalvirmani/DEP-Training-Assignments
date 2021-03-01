@@ -5,19 +5,25 @@ const key = "AIzaSyAcm7OMAvxI0GeuAswTyqIQ8JDcIr_6Gio";
 const pagination_element = document.querySelector(".page-number");
 
 let currentPage = 1;
-let rows;
+let rows=1;
 let q, queryStateChange;
 let nextPageToken = "";
 var dataItems = [];
 let width = window.innerWidth;
 if (width <= 1400) {
   rows = 4;
+  if(width<=1200 && width> 850){
+    rows=3;
+  }
   if (width <= 850 && width > 350) {
     rows = 2;
   }
   if (width <= 350) {
     rows = 1;
   }
+}
+else{
+  rows=5;
 }
 let maxPageCount = 5;
 
